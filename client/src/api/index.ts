@@ -1,13 +1,13 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5001/api',
+  baseURL: import.meta.env.VITE_API_URL,
   timeout: 10000,
 });
 
 api.interceptors.response.use(
   (res) => res,
-  (err) => {
+  (err: any) => {
     console.error('API Error:', err.response?.data || err.message);
     return Promise.reject(err);
   }
