@@ -31,8 +31,8 @@ const RideCard: React.FC<{ ride: Ride; onBook: (ride: Ride) => void }> = ({ ride
             {/* ✅ FIXED HERE */}
             {ride.driver.verified && (
               <span title="Verified">
-                <Shield size={12} className="text-jade-400" />
-              </span>
+              <Shield size={12} className="text-jade-400" />
+            </span>
             )}
 
           </div>
